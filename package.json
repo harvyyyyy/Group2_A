@@ -1,0 +1,25 @@
+{
+  "name": "group2.sia",
+  "version": "1.0.0",
+  "description": "midterm_act",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harvyyyyy/Group2_A.git"
+  },
+  "keywords": [
+    "midterm_exam"
+  ],
+  "author": "Group2, SectionA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harvyyyyy/Group2_A/issues"
+  },
+  "homepage": "https://github.com/harvyyyyy/Group2_A#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
