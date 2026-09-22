@@ -1,22 +1,13 @@
-const express = require("express");
-const routes = express();
+const express = require('express')
+const router = express.Router()
 
-app.get('/', (req, res) => {
-    const users =[
-	{
-	id: 1,
-	name: "Candia",
-	email: "candia@gmail.com"}];
+ const users = [
+    { id: 1, name: 'budbud' },
+    { id: 2, name: 'ungoy' },
+  ];
 
-    res.json({
-        {
-          "success": true,
-          "data": [users],
-          "meta": {
-            "timestamp": "2026-09-17T18:45:00.000Z",
-            "count": 1
-          }
-        }
-    });
+router.get('/users', (_req, res) => {
+ 
+  res.json(users);
 });
 
