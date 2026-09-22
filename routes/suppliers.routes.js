@@ -6,6 +6,14 @@ const suppliers = [
     { id: 2, name: 'Dude 2' },
   ];
 
-router.get('/orders', (_req, res) => {
+router.get('/suppliers', (_req, res) => {
   res.json(suppliers);
+});
+
+router.post('/suppliers', (req, res) => {
+  const newUser = {
+    id: Date.now(),
+    name: req.body.name,
+  };
+  res.status(201).json(newUser);
 });
