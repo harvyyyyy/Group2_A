@@ -1,7 +1,7 @@
 Members: 
-Christian Candia
+Christian Candia (orders)
 Christian Harvy Vincoy
-Matt Oswyn Abuda
-Cham Dyzel Abejero
-Kim Darrene Deguit
+Matt Oswyn Abuda (suppliers)
+Cham Dyzel Abejero (users)
+Kim Darrene Deguit(products)
 Hycinth Babor
