@@ -17,3 +17,13 @@ router.post('/suppliers', (req, res) => {
   };
   res.status(201).json(newUser);
 });
+
+router.put('/users/:id', (req, res) => {
+  const suppliers = suppliers.find((u) => u.id === parseInt(req.params.id));
+  if (suppliers) {
+    suppliers.name = req.body.name;
+    res.json(suppliers);
+  } else {
+    res.status(404).send('User not found');
+  }
+});
