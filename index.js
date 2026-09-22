@@ -1,30 +1,24 @@
 // Package imports
 const express = require('express')
 
-const app = express()
+const app = express.routes()
 
-app.use('/', require('./routes/users.routes'))
+
 app.use('/api/users', require('./routes/users.routes'))
-app.use('/api/me', require('./routes/users.routes'))
+app.use('/api/suppliers', require('./routes/suppliers.routes'))
+app.use('/api/products', require('./routes/products.routes'))
+app.use('/api/orders', require('./routes/orders.routes'))
 
-app.get('/', (req, res) => {
-    const users =[
-	{
-	id: 1,
-	name: "Candia",
-	email: "candia@gmail.com"}]:
-
-    res.json({
-        {
-  "success": true,
-  "data": [ ... ],
-  "meta": {
-    "timestamp": "2026-09-17T18:45:00.000Z",
-    "count": 1
+app.use ((req,res) => {
+	res.status(404).json({
+  success: false,
+  error: {
+    code: "NOT_FOUND",
+    message: "The requested endpoint does not exist on this server."
   }
-}
-    })
+	})
 })
+
  
 app.listen(1234, () => {
 	console.log('Server is running on http://localhost:1234')
